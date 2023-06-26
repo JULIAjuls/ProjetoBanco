@@ -3,5 +3,5 @@ function cadastroView(req, res){
 }
 
 module.exports =  {
-    indexView,
+    cadastroView
 };

@@ -22,6 +22,7 @@ app.use(express.json());
 // Define as rotas da aplicação (declaradas na pasta /src/routes/)
 
 app.use('/', require('./src/routes/indexRoutes'));
+app.use('/', require('./src/routes/usuarioRoutes'));
 
 db.sync(() => console.log(`Banco de dados conectado`));
 
