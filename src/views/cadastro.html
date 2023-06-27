@@ -28,7 +28,7 @@
 
         <h1 class="text-light fw-bold text-center">Cadastro de pessoa</h1>
 
-        <form action="/usuario/cadastro" method="post">
+        <form action="/usuario/conta" method="post">
             <div class="col-12">
                 <label class="form-label text-light fw-bold" for="nome">Nome</label>
                 <input class="form-control" type="text" id="nome" name="nome">
@@ -40,7 +40,7 @@
             <div class="row">
                 <div class="col-6">
                     <label for="dataNasc" class="mt-2 form-label text-light fw-bold">Data de nascimento: </label>
-                    <input type="date" class="form-control" id="dataNasc" name="dataNasc" value="{{dados_pessoais.dataNasc}}"> 
+                    <input type="date" class="form-control" id="dataNasc" name="data_nascimento" value="{{dados_pessoais.data_nascimento}}"> 
                 </div> 
                 <div class="col-6">
                     <label class="mt-2 form-label form-label text-light fw-bold" for="telefone">Telefone</label>

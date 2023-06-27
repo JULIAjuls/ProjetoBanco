@@ -17,6 +17,10 @@ const Pessoa = database.define('pessoa', {
         allowNull: false,
         unique: true
     },
+    data_nascimento: {
+        type: Sequelize.DATE,
+        allowNull: false
+    },
     telefone: {
         type: Sequelize.BIGINT,
         allowNull: false

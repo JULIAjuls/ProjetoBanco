@@ -1,7 +1,10 @@
-function cadastroView(req, res){
-    res.render("cadastro.html");
+const Pessoa = require('../models/pessoa')
+const Usuario = require('../models/usuario')
+
+function loginView(req, res){
+    res.render("login.html");
 }
 
 module.exports =  {
-    cadastroView
+    loginView
 };
