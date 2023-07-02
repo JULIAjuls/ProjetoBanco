@@ -1,16 +1,21 @@
 const Usuario = require('../models/usuario')
+const Pessoa = require('../models/pessoa')
 
-function loginView(req, res){
-    res.render("login.html");
-}
-
-function login(req,res){
+function homeView(req, res){
     let usuario = {
         email: req.body.email,
         senha: req.body.senha
     }
+    res.render("/home.html",{Pessoa},{Usuario});
 }
 
+// function home(req,res){
+//     let usuario = {
+//         email: req.body.email,
+//         senha: req.body.senha
+//     }
+// }
+
 module.exports =  {
-    loginView
+    homeView
 };
