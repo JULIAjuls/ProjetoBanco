@@ -26,43 +26,59 @@
             </div>
         {{/erro}}
 
-        <h1 class="text-light fw-bold text-center">Cadastro de pessoa</h1>
-
         <form action="/usuario/conta" method="post">
-            <div class="col-12">
-                <label class="form-label text-light fw-bold" for="nome">Nome</label>
-                <input class="form-control" type="text" id="nome" name="nome">
-            </div>
-            <div class="col-12">
-                <label class="mt-2 form-label text-light fw-bold" for="cpf">CPF</label>
-                <input class="form-control" type="number" id="cpf" name="cpf">
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <label for="dataNasc" class="mt-2 form-label text-light fw-bold">Data de nascimento: </label>
-                    <input type="date" class="form-control" id="dataNasc" name="data_nascimento" value="{{dados_pessoais.data_nascimento}}"> 
-                </div> 
-                <div class="col-6">
-                    <label class="mt-2 form-label form-label text-light fw-bold" for="telefone">Telefone</label>
-                    <input class="form-control" type="tel" id="telefone" name="telefone">
+                <h1 class="text-light fw-bold text-center">Cadastro de pessoa</h1>
+
+                    <div class="col-12">
+                        <label class="form-label text-light fw-bold" for="nome">Nome</label>
+                        <input class="form-control" type="text" id="nome" name="nome">
+                    </div>
+                    <div class="col-12">
+                        <label class="mt-2 form-label text-light fw-bold" for="cpf">CPF</label>
+                        <input class="form-control" type="number" id="cpf" name="cpf">
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="dataNasc" class="mt-2 form-label text-light fw-bold">Data de nascimento: </label>
+                            <input type="date" class="form-control" id="dataNasc" name="data_nascimento"> 
+                        </div> 
+                        <div class="col-6">
+                            <label class="mt-2 form-label form-label text-light fw-bold" for="telefone">Telefone</label>
+                            <input class="form-control" type="tel" id="telefone" name="telefone">
+                        </div>
+                    </div>            
+                    <div class="col-12">
+                        <label for="endereco" class="mt-2 form-label text-light fw-bold">Endereço: </label>
+                        <input type="text" class="form-control" id="endereco" name="endereco">   
+                    </div>
+                    <div class="col-12">
+                        <label for="cep" class="mt-2 form-label text-light fw-bold">CEP: </label>
+                        <input type="number" class="form-control" id="cep" name="cep">   
+                    </div>
+                    
+                <h1 class="text-light mt-4 fw-bold text-center">Cadastro de usuário</h1>
+
+                    <<div class="row">
+                        <div class="col-6 mx-auto d-block">
+                            <center><label for="email" class="text-light fw-bold">Email</label></center>
+                            <input type="email" id="email" name="email" class="form-control text-center">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 mt-3 mx-auto d-block">
+                            <center><label for="senha" class="text-light fw-bold">Senha</label></center>
+                            <input type="password" id="senha" name="senha" class="form-control text-center">
+                        </div>
+                    </div>
+                <div class="row">
+                    <div class="col-4 mt-4 mx-auto d-block">
+                        <center><button type="submit" class="btn btn-success btn-block">Cadastrar</button></center>
+                    </div>
                 </div>
-            </div>            
-            <div class="col-12">
-                <label for="endereco" class="mt-2 form-label text-light fw-bold">Endereço: </label>
-                <input type="text" class="form-control" id="endereco" name="endereco" value="{{pessoa.endereco}}">   
-            </div>
-            <div class="col-12">
-                <label for="cep" class="mt-2 form-label text-light fw-bold">CEP: </label>
-                <input type="number" class="form-control" id="cep" name="cep" value="{{pessoa.cep}}">   
-            </div>
-            
-            <div class="d-grid mt-3">
-                <button type="submit" class="btn btn-success btn-block">Cadastrar</button>
             </div>
         </form>
-
     </div>
 
 </body>
 
-</html></html>
+</html>
