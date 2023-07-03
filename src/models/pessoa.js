@@ -17,7 +17,7 @@ const Pessoa = database.define('pessoa', {
         allowNull: false,
         unique: true
     },
-    data_nascimento: {
+    dataNasc: {
         type: Sequelize.DATE,
         allowNull: false
     },
