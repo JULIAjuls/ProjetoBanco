@@ -5,7 +5,7 @@ function cadastroView(req, res){
     res.render("cadastro.html",{});
 }
 
-function cadastroPessoa(req,res){
+async function cadastroPessoa(req,res){
     let pessoa = {
         nome: req.body.nome,
         cpf: req.body.cpf,
@@ -14,22 +14,22 @@ function cadastroPessoa(req,res){
         endereco: req.body.endereco,
         cep: req.body.cep
     }
-
-    Pessoa.create(pessoa).then((result) => {
-        res.render("cadastro.html", {pessoa});
-    }).catch((err) => {
-        console.log(err)
-        let erro = err
-        res.render("cadastro.html", {erro});
-    })
-
+    
     let usuario = {
         email: req.body.email,
         senha: req.body.senha
     }
 
-    Usuario.create(usuario).then((result)=>{
-        res.render("cadastro.html", {cadastro});
+    await Pessoa.create(pessoa).then((result) => {
+        console.log("pessoa criada!")
+    }).catch((err) => {
+        console.log(err)
+        let erro = err
+        res.render("cadastro.html", {erro});
+    }) 
+
+    await Usuario.create(usuario).then((result)=>{
+        res.render("cadastro.html", {usuario});
     }).catch((err) => {
         console.log(err)
         let erro = err

@@ -12,6 +12,12 @@
 <body class="bg-dark">
 
     <div class="container-fluid mt-3">
+        {{#pessoa}}
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>{{pessoa.result}}</strong> cadastrado(a) com sucesso!
+            </div>
+        {{/pessoa}}
         
         {{#erro_autenticacao}}
         <div class="alert alert-danger alert-dismissible">
@@ -31,7 +37,7 @@
 
         <img src="/imgs/png/logo-no-bkg.png" class="mx-auto d-block img-fluid mt-5  text-light" width="700" alt="Logo do Julia's Bank">
 
-        <form action="/autenticar" method="post">
+        <form action="/usuario/home" method="post">
             <div class="row">
                 <div class="col-4 mt-5 mx-auto d-block">
                     <center><label for="email" class="text-light fw-bold">Email</label></center>
