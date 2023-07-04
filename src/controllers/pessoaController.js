@@ -20,21 +20,22 @@ async function cadastroPessoa(req,res){
         senha: req.body.senha
     }
 
-    await Pessoa.create(pessoa).then((result) => {
+    await Pessoa.create(pessoa).then(async (result) => {
         console.log("pessoa criada!")
+        await Usuario.create(usuario).then((result)=>{
+            res.render("cadastro.html", {usuario});
+        }).catch((err) => {
+            console.log(err)
+            let erro = err
+            res.render("cadastro.html", {erro});
+        })
     }).catch((err) => {
         console.log(err)
         let erro = err
         res.render("cadastro.html", {erro});
     }) 
 
-    await Usuario.create(usuario).then((result)=>{
-        res.render("cadastro.html", {usuario});
-    }).catch((err) => {
-        console.log(err)
-        let erro = err
-        res.render("cadastro.html", {erro});
-    })
+    
 }
 
 module.exports =  {
